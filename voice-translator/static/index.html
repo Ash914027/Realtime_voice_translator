@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Translator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <nav>
+        <header>
+            <h1><i class="fas fa-language"></i> AI Voice Translator</h1>
+            <p class="subtitle">Speak in any language, translate in real-time</p>
+        </header>
+    </nav>
+    
+    <div class="container animate__animated animate__fadeIn">
+      
+        <div class="status-indicator">
+            <div class="pulse"></div>
+            <span id="status">Ready to translate</span>
+        </div>
+
+        <div class="translation-panel">
+            <div class="panel source animate__animated animate__fadeInLeft">
+                <div class="language-selector">
+                    <div class="select-wrapper">
+                        <i class="fas fa-globe"></i>
+                        <select id="language" class="animate__animated animate__fadeIn">
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="hi">Hindi</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="ru">Russian</option>
+                            <option value="it">Italian</option>
+                            <option value="ar">Arabic</option>
+                            <option value="pt">Portuguese</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="micContainer" class="icon-container">
+                    <i class="fas fa-microphone" id="micIcon"></i>
+                    <div class="ripple"></div>
+                </div>
+                <h3>Original Speech</h3>
+                <div class="text-box" id="originalText">
+                    <i class="fas fa-comment-alt"></i>
+                    <p>Click microphone to start recording...</p>
+                </div>
+            </div>
+
+            <div class="panel target animate__animated animate__fadeInRight">
+                <div class="language-selector">
+                    <div class="select-wrapper">
+                        <i class="fas fa-globe"></i>
+                        <select id="language" class="animate__animated animate__fadeIn">
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="hi">Hindi</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="ru">Russian</option>
+                            <option value="it">Italian</option>
+                            <option value="ar">Arabic</option>
+                            <option value="pt">Portuguese</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="speakerContainer" class="icon-container">
+                    <i class="fas fa-volume-up"></i>
+                    <div class="wave"></div>
+                </div>
+                <h3>Translation</h3>
+                <div class="text-box" id="translatedText">
+                    <i class="fas fa-language"></i>
+                    <p>Translation will appear here...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="error animate__animated animate__fadeIn" id="error"></div>
+    </div>
+
+    <footer>
+        <p>Powered by AI • Speaks 10+ Languages • Real-time Translation</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
